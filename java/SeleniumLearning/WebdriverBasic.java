@@ -23,18 +23,21 @@ public class WebdriverBasic {
         driver.get("https://demo.nopcommerce.com/");
         String PageTitle = driver.getTitle();
         System.out.println(PageTitle);
+        driver.close();
 
 
         WebDriver edgedriver = new EdgeDriver();
         edgedriver.manage().window().maximize();
         edgedriver.get("https://demo.nopcommerce.com/");
         System.out.println(edgedriver.getTitle());
+        edgedriver.close();
 
 //      For Some reason, My firefox browser isn't opening using this method, I tried searching it on google but haven't found a solution so far.
         WebDriver firefoxdriver = new FirefoxDriver();
         firefoxdriver.manage().window().maximize();
         firefoxdriver.get("https://demo.nopcommerce.com/");
         System.out.println(firefoxdriver.getTitle());
+        firefoxdriver.close();
 
 
 
